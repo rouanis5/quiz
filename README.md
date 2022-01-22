@@ -1,22 +1,20 @@
 # LDPDWI quiz challenge
 ## Preview
-![screenshot 1 of the quiz](./images/main.png)
+![screenshot 1 of the quiz](./images/main.jpg)
 ## Description
-Un quiz est un jeu qui consiste en un questionnaire permettant de tester des connaissances générales
-ou spécifiques ou des compétences (source : wikipedia)
-On veut réaliser un système web de quiz avec questionnaire à choix multiples. Pour cela, un
-questionnaire est représenté dans un tableau PHP contenant :
-1. les questions (texte),
-2. les choix de réponse (un tableau PHP) au cas où le type de réponses est choix dans une liste,
-3. le type de la réponse : choix dans une liste (checkbox) ou texte libre(text),
-4. Les bonnes réponses (un autre tableau PHP contenant les bonnes réponses) ou un seule
-réponse (texte).
-
-## Travail à faire
-
-• créer un fonction PHP permettant de générer le formulaire html du Quiz correspondant à un
-tableau $quest généralisé (donc le traitement supposera que nous avons un nombre n de
-questions dans le tableau).
-• réaliser le traitement PHP nécessaire permettant de réceptionner les réponses d'un utilisateur
-sur le questionnaire et de compter le nombre de réponse juste.
-• Tout effort sur la mise en forme et la présentation (CSS) du système web sera le bienvenu.
+A quiz is a game that consists of a questionnaire to test general knowledge
+or specific or skills (source: wikipedia)
+We want to create a web quiz system with a multiple choice questionnaire. For this, a
+questionnaire is represented in a PHP table containing:
+1. the questions (text),
+2. the answer choices (a PHP array) in case the answer type is choice from a list,
+3. the type of response: choice from a list (checkbox) or free text (text),
+4. The correct answers (another PHP array containing the correct answers) or just one
+response (text).
+## Challenge
+• create a PHP function allowing to generate the html form of the Quiz corresponding to a
+generalized $quest array (so processing will assume we have n number of
+questions in the table).
+• perform the necessary PHP processing to receive a user's responses
+on the questionnaire and count the number of correct answers.
+• Any effort on the layout and presentation (CSS) of the web system will be welcome.
