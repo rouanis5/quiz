@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'):
             <div class='msg'>
                 <p>You got <?php echo $score ?> of <?php echo $total ?></p>
                 <h2><?php echo $message ?></h2>
-                <a class="restart" href="./redirect.php" style="background: <?php echo $color ?>">Restart</a>
+                <a class="restart" href="./operations/redirect.php" style="background: <?php echo $color ?>">Restart</a>
             </div>
         </div>
     </div>
