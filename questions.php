@@ -45,9 +45,5 @@ $quest = [
 ];
 $total = 0;
 foreach ($quest as $k => $v) {
-    if (is_array($v["réponse"])) {
-        $total += count($v["réponse"]);
-    } else {
-        $total++;
-    }
+    $total += is_array($v["réponse"]) ? count($v["réponse"]) : 1;
 }
