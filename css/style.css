@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f0f0;
+  font-family: Cairo, Helvetica, sans-serif;
+}
+
+.box {
+  border-radius: 0.7rem;
+  padding: 40px;
+  margin: 30px 0;
+  background: #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  margin-inline: auto;
+  width: 90%;
+  max-width: 900px;
+}
+.container .qst {
+  margin-bottom: 30px;
+  position: relative;
+}
+.container .qst::before {
+  content: "";
+  width: 100%;
+  height: 2.5px;
+  background: #ffa500;
+  bottom: -15px;
+  left: 0;
+  position: absolute;
+}
+.container .qst span {
+  padding: 0 15px;
+  background: orange;
+  color: white;
+  display: inline-block;
+  margin-right: 10px;
+}
+.container .qst h3 {
+  color: #ffa500;
+  margin-bottom: 5px;
+  padding: 5px 0;
+}
+.container .answer {
+  background: #f5f5f5;
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.container .answer.true {
+  background: #7be790 !important;
+}
+.container .answer.false {
+  background: #ec5e5e !important;
+}
+.container .answer.checked {
+  background: #ffe9bf;
+}
+.container .answer:not(.true, .false, .checked):hover {
+  background: #f0f0f0;
+}
+.container input,
+.container label {
+  cursor: inherit;
+}
+.container input + label {
+  margin-left: 5px;
+}
+.container input[type=text] {
+  font-weight: 300;
+  border: none;
+  outline: none;
+  cursor: initial;
+}
+.container input[type=text]:focus {
+  border: 1px solid #bbb;
+}
+.container .submit {
+  padding: 15px 40px;
+  font-size: 18px;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  background: #ffa500;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.container .submit:hover {
+  background: #e49a10;
+}
+
+@property --p {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+.pie {
+  --p: 20;
+  /* the percentage */
+  --b: 22px;
+  /* the thickness */
+  --c: darkred;
+  /* the color */
+  --w: 150px;
+  /* the size*/
+  background: #f7f7f7;
+  border-radius: 50%;
+  width: var(--w);
+  aspect-ratio: 1/1;
+  position: relative;
+  display: inline-grid;
+  margin: 5px;
+  place-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.pie::before,
+.pie::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.pie::before {
+  inset: 0;
+  background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat, conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+.pie::after {
+  inset: calc(50% - var(--b) / 2);
+  background: var(--c);
+  transform: rotate(calc(var(--p) * 3.6deg - 90deg)) translate(calc(var(--w) / 2 - 50%));
+}
+
+.animate {
+  animation: p 1s 0.5s both;
+}
+
+.no-round::before {
+  background-size: 0 0, auto;
+}
+
+.no-round::after {
+  content: none;
+}
+
+@keyframes p {
+  from {
+    --p: 0;
+  }
+}
+.percent {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.percent .msg {
+  margin-left: 20px;
+}
+
+.footer .container {
+  color: white;
+  background: orange;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+  font-size: 20px;
+}
+@media (min-width: 600px) {
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.header h1 {
+  color: orange;
+  font-size: 28px;
+  display: inline-block;
+  padding: 6px 0;
+  padding-right: 3px;
+}
+.header h1 span.php {
+  color: white;
+  background: orange;
+  padding: 0 3px;
+  font-size: 25px;
+  display: inline-block;
+  margin: 3px;
+}
+.header h1 span.quiz {
+  margin-left: -4px;
+  color: #333;
+}
+.header a {
+  text-decoration: none;
+  color: orange;
+  color: #333;
+  cursor: pointer;
+  font-size: 29px;
+  margin-left: 4px;
+  transition: 0.4s;
+}
+.header a:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=style.css.map */
