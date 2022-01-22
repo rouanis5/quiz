@@ -1,12 +1,9 @@
-<?php include './questions.php';?>
-<?php include "./componants/head.php";?>
-<?php include "./componants/header.php";?>
 <?php
-$true_reps = [];
-$false_reps = [];
-$true_text = [];
-$false_text = [];
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST'):
+    $true_reps = [];
+    $false_reps = [];
+    $true_text = [];
+    $false_text = [];
     $score = 0;
     foreach ($_POST as $qst => $repsId) {
         if (is_array($repsId)) {
@@ -57,17 +54,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $color = $red;
         $message = "Very bad, try again!";
     } elseif ($result < 50) {
-        $color = $orange;
-        $message = "You're not so far, try again!";
-    } elseif ($result < 75) {
-        $color = $yellow;
-        $message = "you're medium!";
-    } else {
-        $color = $green;
-        $message = "Excelent!";
-    }
+    $color = $orange;
+    $message = "You're not so far, try again!";
+} elseif ($result < 75) {
+    $color = $yellow;
+    $message = "you're medium!";
 } else {
-    header("Location: index.php");
+    $color = $green;
+    $message = "Excelent!";
 }
 ?>
 <div class="result">
@@ -77,8 +71,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class='msg'>
                 <p>You got <?php echo $score ?> of <?php echo $total ?></p>
                 <h2><?php echo $message ?></h2>
+                <a class="restart" href="./redirect.php" style="background: <?php echo $color ?>">Restart</a>
             </div>
+        </div>
     </div>
 </div>
-<?php include "./componants/form.php";?>
-<?php include "./componants/footer.php";
+<?php endif;
