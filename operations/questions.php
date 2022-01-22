@@ -36,12 +36,6 @@ $quest = [
         "réponse" => "<?php",
         "type" => "text",
     ],
-    "q7" => [
-        "question" => "aaaaaaaa?",
-        "choix" => ["1", "2", "3"],
-        "réponse" => "3",
-        "type" => "radio",
-    ],
 ];
 $total = 0;
 foreach ($quest as $k => $v) {

@@ -193,6 +193,10 @@ body {
     justify-content: space-between;
   }
 }
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .header .container {
   display: flex;
