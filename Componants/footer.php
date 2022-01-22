@@ -4,3 +4,5 @@
         <h6>Made with ❤️ by IDJA Mohamed Ouanis</h6>
     </div>
 </footer>
+</body>
+</html>
