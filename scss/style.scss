@@ -170,6 +170,13 @@ body {
   .msg {
     margin-left: 20px;
   }
+  a.restart{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff;
+    margin: 8px auto 0;
+  }
 }
 .footer {
   .container {

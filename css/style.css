@@ -171,6 +171,13 @@ body {
 .percent .msg {
   margin-left: 20px;
 }
+.percent a.restart {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 20px;
+  color: #fff;
+  margin: 8px auto 0;
+}
 
 .footer .container {
   color: white;
