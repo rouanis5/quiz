@@ -15,6 +15,8 @@ response (text).
 • create a PHP function allowing to generate the html form of the Quiz corresponding to a
 generalized $quest array (so processing will assume we have n number of
 questions in the table).
+
 • perform the necessary PHP processing to receive a user's responses
 on the questionnaire and count the number of correct answers.
+
 • Any effort on the layout and presentation (CSS) of the web system will be welcome.
